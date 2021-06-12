@@ -11,9 +11,8 @@ import ReactDOM from "react-dom";
 //import Memorize from "./components/06-memos/Memorize";
 // import MemoHook from "./components/06-memos/MemoHook";
 //import CallbackHook from "./components/06-memos/CallbackHook";
-//
-
-import TodoApp from "./components/08-useReducer/TodoApp";
-ReactDOM.render(<TodoApp />, document.getElementById("root"));
+//import TodoApp from "./components/08-useReducer/TodoApp";
+import MainApp from "./components/09-useContext/MainApp";
+ReactDOM.render(<MainApp />, document.getElementById("root"));
 
 //import "./components/08-useReducer/intro-reducer";
