@@ -9,12 +9,13 @@ function useFetch(url) {
   });
 
   useEffect(() => {
-    console.log("montado");
+    //console.log("montado");
     return () => {
       isMounted.current = false;
-      console.log("desmontado");
+      //console.log("desmontado");
     };
   }, []);
+
   useEffect(() => {
     setState({ data: null, loading: true, error: null });
     fetch(url)
@@ -27,6 +28,13 @@ function useFetch(url) {
             data,
           });
         }
+      })
+      .catch(() => {
+        setState({
+          data: null,
+          loading: false,
+          error: "No se pudo cargar la info",
+        });
       });
   }, [url]);
 
